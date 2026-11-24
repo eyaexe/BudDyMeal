@@ -37,6 +37,83 @@ body {
   text-align: start;
 }
 
+:root {
+    --maroon-dark: #5A081C;
+    --maroon-main: #7B112C;
+    --maroon-hover: #630C22;
+    --blush-bg: #FDF4F6;
+    --blush-card: #FFF9FA;
+    --blush-soft: #FCE4EC;
+    --blush-border: #F3C6D3;
+    --rose-accent: #D87093;
+
+    --bs-primary: #7B112C;
+    --bs-primary-rgb: 123, 17, 44;
+    --bs-link-color: #7B112C;
+    --bs-link-hover-color: #5A081C;
+}
+
+body {
+    background: linear-gradient(135deg, #FDF2F5 0%, #FCE7ED 100%);
+    min-height: 100vh;
+    color: #3A1D24;
+}
+
+.card {
+    background-color: var(--blush-card);
+    border: 1px solid var(--blush-border) !important;
+    box-shadow: 0 10px 28px rgba(123, 17, 44, 0.08) !important;
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--maroon-main);
+    --bs-btn-border-color: var(--maroon-main);
+    --bs-btn-hover-bg: var(--maroon-hover);
+    --bs-btn-hover-border-color: var(--maroon-hover);
+    --bs-btn-active-bg: var(--maroon-dark);
+    --bs-btn-active-border-color: var(--maroon-dark);
+    border-radius: 10px;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--maroon-main);
+    --bs-btn-border-color: var(--blush-border);
+    --bs-btn-hover-bg: var(--blush-soft);
+    --bs-btn-hover-border-color: var(--maroon-main);
+    --bs-btn-hover-color: var(--maroon-main);
+    --bs-btn-active-bg: var(--maroon-main);
+    --bs-btn-active-border-color: var(--maroon-main);
+    background-color: #FFFFFF;
+}
+
+.text-primary {
+    color: var(--maroon-main) !important;
+}
+
+.form-control {
+    background-color: #FFFFFF;
+    border: 1px solid var(--blush-border);
+    border-radius: 10px;
+}
+
+.form-control:focus {
+    border-color: var(--rose-accent);
+    box-shadow: 0 0 0 0.25rem rgba(216, 112, 147, 0.25);
+}
+
+.navbar-maroon {
+    background: linear-gradient(90deg, #6A0D25 0%, #8E1B3A 100%);
+    border-bottom: 2px solid #F3C6D3;
+}
+
+.navbar-maroon .navbar-brand,
+.navbar-maroon .nav-link {
+    color: #FFF5F7 !important;
+}
+
+.navbar-maroon .nav-link:hover {
+    color: #F8BBD0 !important;
+}
 
 
 

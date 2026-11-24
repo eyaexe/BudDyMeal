@@ -19,7 +19,7 @@ namespace BudDyMeal.Models
         [Required]
         public string Role { get; set; } = "Student";
 
-        // Optional: links a StallOwner to their specific stall ID later
+        // links a StallOwner to their specific stall ID 
         public int? StallId { get; set; }
     }
 }

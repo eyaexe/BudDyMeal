@@ -6,11 +6,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-// 1. Register SQLite Database
+// SQLite Database
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// 2. Register Cookie Authentication
+// 2. Authentication
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
@@ -32,7 +32,6 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-// 3. Enable Authentication BEFORE Authorization
 app.UseAuthentication();
 app.UseAuthorization();
 

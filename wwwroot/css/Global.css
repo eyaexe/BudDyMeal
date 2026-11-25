@@ -6,7 +6,7 @@
     --bg-color-2: #222;
 
 }
-
+          
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +16,7 @@
 body {
     display: flex;
     flex-direction: column;
-/*    min-height:;*/
+/*    min-height:;*/s
     /*    background-color: var(--bg-color);*/
 }
 

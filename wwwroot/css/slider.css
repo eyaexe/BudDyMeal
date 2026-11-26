@@ -12,6 +12,11 @@
     font-size: 14px;
 }
 
+.range-head label{
+    color:var(--neutral-light);
+    font-size:1.2rem;
+}
+
     .range-head output {
         font-variant-numeric: tabular-nums;
         font-weight: 600;
@@ -38,7 +43,7 @@
     .range::-webkit-slider-runnable-track {
         box-sizing: border-box;
         height: 8px;
-        background: #e2e8f0;
+        background: var(--neutral-light);
         border: 0;
         border-radius: 10px;
     }
@@ -50,7 +55,7 @@
         width: 21px;
         height: 21px;
         margin-top: -6.5px; /* centres the thumb on the track */
-        background: #4f46e5;
+        background: var(--secondary-color);
         border: 0;
         border-radius: 50%;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);

@@ -1,39 +1,60 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+	ViewData["Title"] = "Home Page";
 }
 
 <div class="leftCard">
-    <div class="leftUpperCard" style="background-color: #444;">
+	<div class="leftUpperCard">
 
-        <div class="range-field">
-            <div class="range-head">
-                <label for="range-input">Budget</label>
-				<input type="number" class="number" id="number-input" min="20" max="200" value="20" style="text-align:center;"/>
-                @* <output for="range-input">20</output> *@
-            </div>
-            <input type="range" class="range" id="range-input" min="20" max="200" step="1" value="20">
-            <button>Confirm</button>
+		<div class="range-field">
+			<div class="range-head">
+				<label for="range-input">Budget Selector</label>
+				<input type="number" class="number" id="number-input" min="20" max="200" value="20" style="text-align:center;" />
+				@* <output for="range-input">20</output> *@
+			</div>
+			<input type="range" class="range" id="range-input" min="20" max="200" step="1" value="20">
+			<button type="button" id="confirmBtn">Confirm</button>
 
-        </div>
+		</div>
+
+		<div class="filter-field">
+			<div class="filtercont">
+				<button type="button" class="filterBtn" data-filter="riceMeal">Rice Meals</button>
+				<button type="button" class="filterBtn" data-filter="ulam">Ulam</button>
+				<button type="button" class="filterBtn" data-filter="snack">Snack</button>
+				<button type="button" class="filterBtn" data-filter="drinks">Drinks</button>
+			</div>
+			<div>
+				<p>0 found combo meals for P20.00</p>
+			</div>
+		</div>
 
 
-		<div class="filterButtons">
-			<button>Rice</button>
-			<button>Mains</button>
-			<button>Snack</button>
-			<button>Drinks</button>
-        </div>
-           
 
-    </div>
-    <div class="leftLowerCard" style="background-color: #555;">
-
-
-
-    </div>
+	</div>
+	<div class="map" style="background-color:#f5f5f7;">
+	</div>
 
 </div>
-<div class="rightCard" style="background-color:#000;">
-    <div class="rightUpperCard" style="background-color: #111;"></div>
-    <div class="rightLowerCard" style="background-color: #222;"></div>
+<div class="rightCard">
+	<div class="rightUpperCard">
+		<div class="topDecor"></div>
+
+		<h2>Result</h2>
+		<div id="resultList">
+			<p>no result yet</p>
+
+		</div>
+
+	</div>
+	<div class="rightLowerCard">
+		<div class="topDecor"></div>
+		<h2>Saved</h2>
+		<div id="savedMeals">
+			<p>no saved yet</p>
+		</div>
+
+	</div>
+		
+
+	</div>
 </div>

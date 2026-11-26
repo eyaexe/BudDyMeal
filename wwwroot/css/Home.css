@@ -1,58 +1,164 @@
 ﻿header {
-    height: 60px;
+    height: 45px;
     width: 100%;
-    background-color: var(--primary-color);
+    background-color: transparent;
     display: flex;
     justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index:20;
 }
 
+
 header nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: min(100% - 2rem, 80rem);
-        height: 100%;
-    }
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: min(100% - 2rem, 80rem);
+   height: 100%;
+}
+
+.navbarBrand p{
+    color:var(--text-color);
+}
 
 .user-profile {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
-.user-profile img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-.user-profile p {
-    font-weight: bold;
-    margin: 0;
-}
+
+    .user-profile img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .user-profile p {
+        font-weight: bold;
+        margin: 0;
+    }
 
 main {
     width: min(100% - 2rem, 80rem);
     margin: 2rem auto;
-    min-height: calc(100dvh);
+    height: calc(100dvh);
     display: grid;
     grid-template-columns: 4fr 1fr;
+    gap:10px;
 }
+
 .leftCard {
     display: grid;
-    flex-direction: column;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: minmax(0,1fr) minmax(0,5fr);
 }
 
 .leftUpperCard {
-   display:flex;
-   justify-content:space-around;
-   align-items:center;
+    top:4%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color:var(--primary-color);
+    border-radius:12px 12px 0px 0px;
 }
 
-.filterButtons button {
-    height:100px;
-    width:100px;
+.map {
+    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius:0px 0px 12px 12px;
 }
+
+.filter-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.filtercont button {
+    height: 3rem;
+    width: 6.25rem;
+    border-radius: 12px;
+    border-style: none;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+#confirmBtn {
+    width:50%;
+    place-items:center;
+    margin: 0 auto;
+}
+.filterBtn.active {
+    background-color: black;
+}
+
+.filter-field div p {
+    color:white;
+}
+
+.topDecor {
+    height:0.75rem;
+    width:100%;
+    background-color:var(--primary-color);
+    border-radius: 7px 7px 7px 7px;
+}
+
+.rightCard {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); /* locks yellow top and black bottom at 50/50 */
+    gap:10px;
+    min-height: 0;
+
+}
+
+.rightUpperCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    background-color: #f5f5f7;
+    border-radius:12px;
+}
+
+    .rightUpperCard h2 {
+        text-align: center;
+        padding: 10px;
+        flex-shrink: 0;
+    }
+
+    .rightUpperCard p {
+        text-align: center;
+        margin: 50% auto;
+        width: 100%;
+    }
+
+.rightLowerCard {
+    background-color: #f5f5f7;
+    border-radius: 12px;
+}
+
+.rightLowerCard h2 {
+    text-align: center;
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+.rightLowerCard p {
+    text-align: center;
+    margin: 50% auto;
+    width: 100%;
+}
+
+
+#result-list {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto; /* creates an internal scrollbar inside the yellow box when meals overflow */
+    padding: 0 10px 10px;
+}
+
 
 
 
@@ -106,10 +212,10 @@ main {
 
 
 footer {
-/*    margin-top:auto;*/
+    /*    margin-top:auto;*/
     height: 60px;
     width: 100%;
     background-color: var(--primary-color);
     display: flex;
-/*    justify-content: center;*/
+    /*    justify-content: center;*/
 }

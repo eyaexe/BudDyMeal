@@ -3,20 +3,7 @@
 
 // Write your JavaScript code.
 
-// shows the current value
-
-// const slider = document.getElementById('range-input');
-// const numberInput = document.getElementById('number-input')
-
-// slider.addEventListener('input', () => {
-//     numberInput.value = slider.value;
-// });
-
-// numberInput.addEventListener('input', () => {
-//     slider.value = numberInput.value;
-// });
-
-
+//slider js
 const slider = document.getElementById('range-input');
 const numberInput = document.getElementById('number-input');
 
@@ -32,7 +19,6 @@ numberInput.addEventListener('input', () => {
         numberInput.value = val;
     }
 
-    // Update slider if valid
     if (!isNaN(val) && val >= 20) {
         slider.value = val;
     }
@@ -50,3 +36,22 @@ numberInput.addEventListener('change', () => {
     numberInput.value = val;
     slider.value = val;
 });
+//slider js
+
+//filter js
+const filterBtn = document.querySelectorAll('.filterBtn');
+
+filterBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+    })
+})
+
+
+
+
+
+
+
+
+
